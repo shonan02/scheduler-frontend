@@ -24,6 +24,16 @@ body {
   position: relative;
 }
 
+/* .navbar ul {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.navbar ul a:hover {
+  background-color: black;
+  color: white;
+} */
+
 .logo {
 }
 
