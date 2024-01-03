@@ -3,6 +3,7 @@ const FacebookLoginButton = ({ onLogin }) => {
         //Initialise Facebook SDK
         window.FB.init({
             appId: '339992368896098',
+            useCachedDialogs: false,
             autoLogAppEvents: true,
             xfbml: true,
             version: 'v14.0'
@@ -13,6 +14,7 @@ const FacebookLoginButton = ({ onLogin }) => {
             if(res.authResponse) {
                 //User is logged in and granted permissions
                 onLogin(res.authResponse.accessToken);
+                
             } else {
                 //User cancelled login
             }
