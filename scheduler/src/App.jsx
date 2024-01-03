@@ -4,6 +4,7 @@ import Navigation from './components/Navigation/Navigation';
 import Reigster from './components/Register/Register';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
+import Profile from './components/Profile/Profile';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Reigster />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </div>
     </>
