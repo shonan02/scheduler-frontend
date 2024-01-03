@@ -12,7 +12,7 @@ function App() {
   
   return (
     <>
-    {/* <Navigation /> */}
+    <Navigation />
     <FacebookLoginButton onLogin={onLogin} />
     <Reigster />
     <Login />
