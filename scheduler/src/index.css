@@ -7,6 +7,32 @@ body {
   font-family: "Poppins", sans-serif;
   background-color: #fcfcfc;
 }
+
+.form-container {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.input-group {
+  right: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.main-app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 20px;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
