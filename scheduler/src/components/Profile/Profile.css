@@ -1,0 +1,15 @@
+.profile-wrapper {
+    width: 100%;
+    margin: 0 5px;
+}
+
+.dashboard-list li {
+    list-style-type: none;
+    padding: 20px;
+    color: lightgrey;
+}
+
+.accounts-list {
+    list-style-type: none;
+    padding: 15px 0;
+}

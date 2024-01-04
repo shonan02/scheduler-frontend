@@ -6,6 +6,7 @@ import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Profile from './components/Profile/Profile';
 import { Route, Routes } from 'react-router-dom';
+import ProtectedRoute from './utils/ProtectedRoute';
 
 function App() {
   const onLogin = (accessToken) => {
@@ -21,7 +22,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/Register" element={<Reigster />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path='/profile/*'
+          element={
+            <ProtectedRoute>
+              <Profile />
+            </ProtectedRoute>
+          } />
       </Routes>
     </div>
     </>
