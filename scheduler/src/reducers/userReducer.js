@@ -19,7 +19,7 @@ export const loginUser = (user) => {
     return async dispatch => {
         try {
             const loggedUser = await loginService.login(user);
-            window.localStorage.setItem("loggedUser", JSON.stringify(loggedUser));
+            window.localStorage.setItem("user-token", JSON.stringify(loggedUser));
             dispatch(setUser(loggedUser));
         } catch(err) {
             console.log(err);
