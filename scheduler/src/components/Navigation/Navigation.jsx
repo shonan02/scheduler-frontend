@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import routes from "../../routes";
 import Hamburger from './Hamburger';
-
+import { logout } from '../../reducers/userReducer';
+import { useDispatch } from 'react-redux';
 const Navigation = () => {
     const [showNavbar, setShowNavbar] = useState(false);
     const [isLoggedIn, setIsLoggedin] = useState(false);
@@ -20,6 +21,14 @@ const Navigation = () => {
       }
 
       setIsLoggedin(true);
+    }
+
+
+    const logoutUser = () => {
+        //Call redux
+        const dispatch = useDispatch();
+        console.log("logut");
+        dispatch(logout());
     }
 
     useEffect(() => {
@@ -55,7 +64,8 @@ const Navigation = () => {
                 <Link to="/profile">Profile</Link>
               </li>
               <li>
-                <Link to="/logout">Logout</Link>
+                <Link to="/"
+                  onClick={() => logoutUser()}>Logout</Link>
               </li>
             </ul>
           )}

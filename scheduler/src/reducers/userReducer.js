@@ -27,5 +27,18 @@ export const loginUser = (user) => {
     }
 }
 
+export const logout = () => {
+    return async dispatch => {
+        try {
+            dispatch(removeUser());
+            //Reset all values
+            localStorage.removeItem("user-token");
+            localStorage.clear();
+        } catch (err) {
+            console.log(err);
+        }
+    }
+}
+
 export const { setUser, deleteUser } = userSlice.actions;
 export default userSlice.reducer;
