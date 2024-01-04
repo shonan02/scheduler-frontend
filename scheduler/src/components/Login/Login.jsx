@@ -1,7 +1,9 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import routes from '../../routes';
 import loginService from "../../services/login";
+import { loginUser } from "../../reducers/userReducer";
 
 const Login = () => {
     const emptyUser = {
@@ -10,6 +12,7 @@ const Login = () => {
     }
 
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
     const [user, setUser] = useState(emptyUser);
     const [error, setError] = useState(null);
@@ -18,7 +21,9 @@ const Login = () => {
         e.preventDefault();
         
         try {
-            const res = await loginService.login(user);
+            // const res = await loginService.login(user);
+            dispatch(loginUser(user));
+
             //Reset fields
             setUser(emptyUser);
 
